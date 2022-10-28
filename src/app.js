@@ -1,3 +1,5 @@
+//configure express
+require('dotenv').config();
 const express=require("express");
 const path=require("path");
 const app=express();
@@ -8,7 +10,7 @@ const Register=require("./models/registers");
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.set("view engine", "hbs");
-const port=process.env.PORT || 8000;
+const port=process.env.PORT || 3000;
 const static_path=path.join(__dirname, " ../views" );
 app.use('/',express.static('views'));
 //routing
@@ -33,7 +35,8 @@ app.post("/index",async(req, res) => {
             password:password,
            confirmpassword:cpassword
         })
-        //password hash
+        //password authentication
+        const token=await registerUser.generateAuthToken();
 
         const registered=await registerUser.save();
         res.status(201).render("login");
@@ -56,6 +59,8 @@ app.post("/login",async(req, res) => {
         const email=req.body.email;
         const password=req.body.password;
         const useremail = await  Register.findOne({email:email});
+        //const isMatch=await bcrypt.compare(password,useremail.password);
+        const token=await useremail.generateAuthToken();
        if(useremail.password==password)
        {
 res.status(201).render("register");
@@ -63,7 +68,7 @@ res.status(201).render("register");
         res.send("password not matched");
        }
     } catch (error) {
-        res.status(400).send("invalid email")   
+        res.status(400).send("invalid email");  
     }
 });
 app.get("/group",(req, res) => {

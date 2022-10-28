@@ -1,5 +1,6 @@
 const mongoose=require("mongoose");
 const bcrypt =require("bcryptjs");
+const jwt=require("jsonwebtoken");
 //Defining Schema
 const userSchema=new mongoose.Schema({
     username : {
@@ -18,19 +19,38 @@ const userSchema=new mongoose.Schema({
     confirmpassword : {
         type:String,
         required:true
-    }
+    },
+    tokens:[{
+        token:{
+            type:String,
+            required:true 
+        }
+    }]
 })
  //password hash
 userSchema.pre("save",async function (next){
     if(this.isModified("password")){
-        console.log(`password is ${this.password}`);
+       
     
     this.password=await bcrypt.hash(this.password,10);
-    console.log(`Hashed password is ${this.password}`);
-    this.confirmpassword=undefined;
+    
+    this.confirmpassword=await bcrypt.hash(this.password,10);
     }
     next();
 })
+//generating tokens
+userSchema.methods.generateAuthToken=async function(){
+    try {
+        const token=jwt.sign({_id:this._id.toString()},process.env.SECRET_KEY);
+        this.tokens=this.tokens.concat({token})
+        await this.save();
+        return token;
+    } catch (error) {
+        res.send("error "+ error);
+        console.log("error "+ error);
+        
+    }
+}
 //creating registers in our database
 const Register=new mongoose.model("Register",userSchema);
 module.exports=Register;
