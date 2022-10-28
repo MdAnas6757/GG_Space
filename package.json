@@ -1,0 +1,27 @@
+{
+  "name": "gg_space",
+  "version": "1.0.0",
+  "description": "A webproject on FIFA CUP-2022,by  the team Code Pirates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MdAnas6757/GG_Space.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MdAnas6757/GG_Space/issues"
+  },
+  "homepage": "https://github.com/MdAnas6757/GG_Space#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "init": "^0.1.2",
+    "mongoose": "^6.7.0",
+    "nodemon": "^2.0.20"
+  }
+}
