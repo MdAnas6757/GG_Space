@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Dancing+Script&family=Signika+Negative:wght@500;700&family=Smooch+Sans:wght@100&display=swap');
+
+
+
+body{
+
+     background: url('img1.jpeg'); 
+    
+  height: 1000px;
+
+  
+}
+
+
+
+.middle{
+    height:250px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+   font-size: 20px;
+   font-weight: 100;
+    display: flex;
+    align-items: center;
+}
+
+.subnav1{
+  position: sticky;
+
+  top: 0px;
+  display: flex;
+  background-color: rgb(1,30,63);
+  color: white;
+  height:150px;
+  align-items: center;
+  padding:10px;
+  list-style: none;
+  
+}
+.subnav1 li{
+  margin: 30px;
+  
+}
+.subnav1 li a{
+   padding-top: 4rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: white;
+  padding: 5px;
+}
+a:hover{
+background-color: rgb(4, 74, 88);
+border-radius: 10px;
+color: rgb(255, 255, 255);
+}
+
+
+
+
+.know{
+  
+  width: 30rem;
+
+  color: white;
+  margin-top: 50px;
+  margin-left: 100px;
+
+}
+.know h1{
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+section{
+  
+  height: 80rem;
+  color:rgb(0, 0, 0);
+background-color:white;
+  margin-top: 30rem;
+  display: flex;
+}
+
+
+.text{
+  width: 40%;
+  margin-top: 8px;
+}
+.text h1{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+
+
+#mid{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bottom{
+  background-color: white;
+  height: 40rem;
+}
+
+
+
+
+/* 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: url('img1.jpeg'); 
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+  background: rgb(251, 248, 248);
+} */
+
+.middle{
+  height:250px;
+color: white;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+ font-size: 20px;
+ font-weight: 100;
+  display: flex;
+  align-items: center;
+}
+footer{
+  position: relative;
+  width: 100%;
+  background: rgb(20, 20, 21);
+  min-height: 100px;    
+ padding: 20px 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+
+footer .social_icon,
+footer .menu
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li
+{
+  list-style: none;
+}
+
+footer .social_icon li a
+{
+  font-size: 2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+
+footer .social_icon li a:hover
+{
+  transform: translateY(-10px);
+}
+footer .menu li a
+{
+  font-size: 1.2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+ text-decoration: none;
+ opacity: 0.75;
+}
+footer .menu li a:hover
+{
+  opacity:1 ;
+}
+footer p
+{
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+footer .wave
+{
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgb(29, 29, 30) url(wave.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1
+{
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2
+{
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 3s linear infinite;
+}
+footer .wave#wave3
+{
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_03 2s linear infinite;
+}
+footer .wave#wave4
+{
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_04 1s linear infinite;
+}
+@keyframes animateWave
+{
+0%
+{
+  background-position-x: 1000px;
+}
+100%
+{
+  background-position-x: 0px;
+}
+}
+@keyframes animateWave_02 
+{
+0%
+{
+  background-position-x: 1000px;
+}
+100%
+{
+  background-position-x: 0px;
+}
+}
+
+
+.login{
+  margin-left: 1100px;
+}
