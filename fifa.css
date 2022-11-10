@@ -1,0 +1,159 @@
+body{
+  hegiht:10000px;
+
+}
+
+@media screen and (max-width: 665px){
+    .boxes{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    background: rgb(20, 20, 21);
+    min-height: 100px;    
+   padding: 20px 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+
+footer .social_icon,
+footer .menu
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .social_icon li,
+footer .menu li
+{
+    list-style: none;
+}
+
+footer .social_icon li a
+{
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+
+footer .social_icon li a:hover
+{
+    transform: translateY(-10px);
+}
+footer .menu li a
+{
+    font-size: 1.2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+   text-decoration: none;
+   opacity: 0.75;
+}
+footer .menu li a:hover
+{
+    opacity:1 ;
+}
+footer p
+{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+
+@keyframes animateWave
+{
+ 0%
+ {
+    background-position-x: 1000px;
+ }
+ 100%
+ {
+    background-position-x: 0px;
+ }
+}
+@keyframes animateWave_02 
+{
+ 0%
+ {
+    background-position-x: 1000px;
+ }
+ 100%
+ {
+    background-position-x: 0px;
+ }
+}
+
+footer{
+    margin-top: 100px;
+}
+
+.detail h3{
+    margin-top: 100px;
+    text-align:center;
+    background-color: aliceblue;
+}
+.boxes{
+    display:flex;
+    
+    justify-content: center;
+    background-color: rgb(35, 9, 135);
+ 
+}
+.card{
+    margin: 10px;
+
+
+}
+.card-text{
+    width:100%;
+}
+h1,h5{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.card:hover{
+    scale: 1.05;
+}
+
+
+.navdown{
+    background-image: url('Blue1.jpg');
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.navdown img{
+     height: 140px; 
+     width: 20%;
+     padding-top: 20px;
+}
+#content{
+    font-size: 3rem;
+    color: blue;
+    text-align: center;
+}
+.x{
+    display:flex;
+    justify-content: center;
+}
