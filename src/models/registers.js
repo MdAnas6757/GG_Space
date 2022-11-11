@@ -52,5 +52,5 @@ userSchema.methods.generateAuthToken=async function(){
     }
 }
 //creating registers in our database
-const Register=new mongoose.model("Register",userSchema);
-module.exports=Register;
+const enter=new mongoose.model("Register",userSchema);
+module.exports=enter;
